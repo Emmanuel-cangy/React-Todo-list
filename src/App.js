@@ -1,25 +1,50 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import NavBar from "./components/Navbar";
+import "./App.css";
+import NavExtended from "./components/navextend";
+import Task from "./components/task";
+import Form from "./components/form";
 
-function App() {
+const App = () => {
+  const [inputMain, setInputMain] = useState("");
+  const [inputDesc, setInputDesc] = useState("");
+  const [inputDate, setInputDate] = useState("");
+  const [inputPerson, setInputPerson] = useState("");
+  const [todos, setTodos] = useState([]);
+
+  const [show, setShow] = useState("hide");
+  const [showContainer, setShowContainer] = useState("");
+
+  const handleShow = () => {
+    show === "" ? setShow("hide") : setShow("");
+    showContainer === ""
+      ? setShowContainer("showContainer")
+      : setShowContainer("");
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className=" flex flex-col justify-center items-center mt-16">
+      <NavBar />
+      <NavExtended onShow={handleShow} />
+
+      <Task todos={todos} setTodos={setTodos} />
+      <div className={`container ${show}`} id={`${showContainer}`}>
+        <Form
+          setShow={setShow}
+          inputMain={inputMain}
+          setInputMain={setInputMain}
+          inputDesc={inputDesc}
+          setInputDesc={setInputDesc}
+          inputPerson={inputPerson}
+          setInputPerson={setInputPerson}
+          inputDate={inputDate}
+          setInputDate={setInputDate}
+          todos={todos}
+          setTodos={setTodos}
+        />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
