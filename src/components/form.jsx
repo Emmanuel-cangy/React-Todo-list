@@ -49,8 +49,17 @@ const Form = ({
   const onInputChangeDate = (event) => {
     setInputDate(event.target.value);
   };
+
   return (
     <div className="container mt-4 bg-gray-700 rounded-md">
+      <div className="container flex justify-end">
+        <button
+          onClick={onShow}
+          className="bg-gray-500 px-1 py-1 w-8 h-8 mt-2 mr-4 rounded-full font-bold font-mono"
+        >
+          X
+        </button>
+      </div>
       <form onSubmit={handleSubmit} className="pt-4 pb-4 px-2" onClick={onShow}>
         <input
           className="outline-none mb-4 container bg-transparent px-2 py-1 truncate"
@@ -91,12 +100,6 @@ const Form = ({
             />
           </div>
           <div className="flex gap-4">
-            <button
-              onClick={onShow}
-              className="bg-gray-500 px-4 py-1 rounded-md"
-            >
-              Cancel
-            </button>
             <button
               className="submitButton bg-blue-300 px-4 py-1 rounded-md"
               type="submit"
