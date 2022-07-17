@@ -6,15 +6,16 @@ import Task from "./components/task";
 import Form from "./components/form";
 
 const App = () => {
+  // Form Data parsed from Form to Task
   const [inputMain, setInputMain] = useState("");
   const [inputDesc, setInputDesc] = useState("");
   const [inputDate, setInputDate] = useState("");
   const [inputPerson, setInputPerson] = useState("");
   const [todos, setTodos] = useState([]);
 
+  // show the Form and Hide it on submit
   const [show, setShow] = useState("hide");
   const [showContainer, setShowContainer] = useState("");
-
   const handleShow = () => {
     show === "" ? setShow("hide") : setShow("");
     showContainer === ""
@@ -30,6 +31,7 @@ const App = () => {
       <Task todos={todos} setTodos={setTodos} />
       <div className={`container ${show}`} id={`${showContainer}`}>
         <Form
+          onShow={handleShow}
           setShow={setShow}
           inputMain={inputMain}
           setInputMain={setInputMain}
