@@ -2,7 +2,7 @@ import React from "react";
 
 const NavExtended = ({ onShow }) => {
   return (
-    <div className="flex justify-between container mx-5 border-b-2 bg-gray-100">
+    <div className="text-gray-300 flex justify-between container mx-5 border-b-2 border-gray-500 headerextender-color">
       <div className="flex justify-start mx-3 mt-4">
         <h1 className="pl-3 px-2 pb-2 mr-8 hover:border-b-2 border-blue-300">
           Notification

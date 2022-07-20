@@ -55,12 +55,12 @@ const Form = ({
       <div className="container flex justify-end">
         <button
           onClick={onShow}
-          className="bg-gray-500 px-1 py-1 w-8 h-8 mt-2 mr-4 rounded-full font-bold font-mono"
+          className="box-border bg-gray-500 px-1 py-1 w-8 h-8 mt-2 mr-4 rounded-full font-bold font-mono"
         >
           X
         </button>
       </div>
-      <form onSubmit={handleSubmit} className="pt-4 pb-4 px-2" onClick={onShow}>
+      <form onSubmit={handleSubmit} className="pt-4 pb-4 px-2">
         <input
           className="outline-none mb-4 container bg-transparent px-2 py-1 truncate"
           name="mainTask"

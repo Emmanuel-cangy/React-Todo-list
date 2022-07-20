@@ -27,3 +27,15 @@ code {
   opacity: 1;
   transition: opacity 0.275s linear;
 }
+
+.header-color {
+  background: #35393b;
+}
+
+.headerextender-color {
+  background: #242628;
+}
+
+.task-background-color {
+  background: #212324;
+}
