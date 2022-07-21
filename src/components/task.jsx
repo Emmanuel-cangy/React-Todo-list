@@ -37,7 +37,7 @@ const Task = ({ todos, setTodos }) => {
                   type="text"
                   className={`${
                     todo.completed ? "complete" : ""
-                  } outline-none container text-gray-50 bg-transparent mb-2 ml-2 text-lg font-sans`}
+                  } container text-bar text-gray-50 bg-transparent mb-2 ml-2 text-lg font-sans`}
                   value={todo.title}
                   onChange={(event) => event.preventDefault()}
                 />
@@ -45,7 +45,7 @@ const Task = ({ todos, setTodos }) => {
                   type="text"
                   className={`${
                     todo.completed ? "complete" : ""
-                  } outline-none bg-transparent ml-4 text-sm text-gray-300 font-sans`}
+                  } text-bar bg-transparent ml-4 text-sm text-gray-300 font-sans`}
                   value={todo.description}
                   onChange={(event) => event.preventDefault()}
                 />
@@ -62,7 +62,7 @@ const Task = ({ todos, setTodos }) => {
                     type="text"
                     className={`${
                       todo.completed ? "complete" : ""
-                    } outline-none bg-transparent ml-2 font-sans`}
+                    } outline-none text-bar bg-transparent ml-2 font-sans`}
                     value={todo.date}
                     onChange={(event) => event.preventDefault()}
                   />

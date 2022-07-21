@@ -47,3 +47,19 @@ code {
 .color {
   background-color: rgb(59 130 246);
 }
+
+.text-bar {
+  color: transparent;
+  text-shadow: 0 0 0 white;
+}
+
+.text-bar:focus {
+  outline: none;
+}
+
+input:focus {
+  /* outline: none !important; */
+  color: rgb(234, 233, 233);
+  border-color: #ffffff;
+  box-shadow: 0 0 10px #ffffff;
+}

@@ -63,7 +63,7 @@ const Form = ({
       </div>
       <form onSubmit={handleSubmit} className="pt-4 pb-4 px-2">
         <input
-          className="outline-none mb-4 container bg-transparent px-2 py-1 truncate"
+          className="outline-none mb-4 container bg-transparent text-gray-200 px-2 py-1 truncate"
           name="mainTask"
           type="text"
           placeholder="Task Name"
@@ -73,7 +73,7 @@ const Form = ({
         />
         <br />
         <input
-          className="outline-none mb-4 container bg-transparent px-2 py-1"
+          className="outline-none mb-4 container bg-transparent text-gray-200 px-2 py-1"
           name="description"
           type="text"
           placeholder="Description"
@@ -84,7 +84,7 @@ const Form = ({
         <div className="flex justify-between mb-3 mx-2">
           <div className="flex">
             <input
-              className="outline-none mr-2 bg-transparent"
+              className="outline-none mr-2 bg-transparent text-gray-200"
               name="date"
               type="date"
               placeholder="Date"
@@ -92,7 +92,7 @@ const Form = ({
               onChange={onInputChangeDate}
             />
             <input
-              className="outline-none bg-transparent px-2 py-1"
+              className="outline-none bg-transparent text-gray-200 px-2 py-1"
               name="assingTo"
               type="text"
               placeholder="Assign To"
