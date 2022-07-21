@@ -30,6 +30,7 @@ const App = () => {
       <NavExtended onShow={handleShow} />
 
       <Task todos={todos} setTodos={setTodos} />
+
       <div className={`container ${show}`} id={`${showContainer}`}>
         <Form
           onShow={handleShow}

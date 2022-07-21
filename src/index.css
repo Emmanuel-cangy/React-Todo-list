@@ -39,3 +39,11 @@ code {
 .task-background-color {
   background: #212324;
 }
+
+.complete {
+  text-decoration: line-through;
+}
+
+.color {
+  background-color: rgb(59 130 246);
+}

@@ -26,6 +26,7 @@ const Form = ({
         person: inputPerson,
         date: inputDate,
         completed: false,
+        color: false,
       },
     ]);
     setInputMain("");
